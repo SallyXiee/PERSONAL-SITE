@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 110px; /* 預留出導航欄的高度 */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box; /* 確保 padding 和 border 被包含在寬度內 */
+    /* 固定導航欄 */
+    position: fixed; /* 固定在視窗頂部 */
+    top: 0; /* 距離頂部 0 */
+    left: 0; /* 距離左側 0 */
+    width: 100%; /* 導航欄寬度為全屏 */
+    z-index: 1000; /* 保證在其他內容上層 */
+    background-color: #fff; /* 添加背景色，防止滾動時透明 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加輕微陰影效果 */
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left; /* 向左對齊 */
+    margin-left: 50px; /* 向左移動一些，數值可以根據需要調整 */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    font-weight: bold;
+    margin-right: 50px; /* 往左移一點，數值可調整 */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%; 
+    height: auto; 
+    max-width: 500px; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: 10px; /* 圓角效果 */
+}
+
+.hero-text {
+    flex: 1;
+    padding: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-text h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.hero-text p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 每行兩列 */
+    gap: 80px; /* 圖片之間的間距 */
+    margin: 2rem auto; /* 外框區域的外邊距，auto 使其水平居中 */
+    max-width: 1200px; /* 最大寬度限制 */
+    width: 90%; /* 根據屏幕調整寬度（90% 是相對於父容器的寬度） */
+    padding: 1rem; /* 添加內邊距，讓內容與邊框有空間 */
+    margin: 0 auto; /* 居中顯示 */
+    box-sizing: border-box; /* 確保 padding 不影響寬度 */
+}
+
+
+.work-item {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff; /* 白色背景 */
+    text-align: center; /* 標題居中 */
+}
+
+
+.work-item img {
+    width: 100%; /* 讓圖片寬度填滿容器 */
+    height: 400px; /* 固定圖片高度，統一大小 */
+    object-fit: cover; /* 保持圖片比例，同時裁剪多餘部分 */
+    display: block;
+    transition: transform 0.3s ease; /* 懸停時放大效果 */
+}
+
+
+.work-item img:hover {
+    transform: scale(1.05); /* 懸停時放大圖片 */
+}
+
+.work-item h3 {
+    margin-top: 8px;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+}
+
